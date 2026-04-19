@@ -1,0 +1,143 @@
+/* Custom styles for the portfolio */
+
+/* Font family variables */
+:root {
+    --font-inter: 'Inter', sans-serif;
+}
+
+/* Base styles */
+body {
+    font-family: var(--font-inter);
+}
+
+/* Custom font weights */
+.font-satoshi-black {
+    font-weight: 900;
+}
+
+.font-satoshi-bold {
+    font-weight: 700;
+}
+
+.font-satoshi-medium {
+    font-weight: 500;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header scroll effect */
+.scrolled {
+    background: linear-gradient(to right, rgb(219 234 254), rgb(191 219 254)) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile menu animations */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+/* Contact modal animations */
+#contact-sheet {
+    transition: transform 0.3s ease;
+}
+
+#contact-sheet.open {
+    transform: translateX(0);
+}
+
+/* Typing animation */
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid;
+    white-space: nowrap;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: currentColor }
+}
+
+/* Fade in animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effects */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Project cards */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Skill bars */
+.skill-bar {
+    transition: width 1.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #93c5fd;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #60a5fa;
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0,0,0,.1);
+    border-radius: 50%;
+    border-top-color: #93c5fd;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
